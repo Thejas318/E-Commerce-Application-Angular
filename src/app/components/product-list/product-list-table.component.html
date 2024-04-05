@@ -1,0 +1,34 @@
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>IMAGE</th>
+            <!-- <th scope="col">SKU</th> -->
+            <th scope="col">NAME</th>
+            <!-- <th scope="col">DESCRIPTION</th> -->
+            <th scope="col">UNIT PRICE</th>
+            <!-- <th scope="col">IMAGE URL</th> -->
+            <!-- <th scope="col">ACTIVE</th> -->
+            <th scope="col">UNITS IN STOCK</th>
+            <!-- <th scope="col">DATE CREATED</th> -->
+            <!-- <th scope="col">LAST UPDATED</th> -->
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let items of products">
+            <td >
+                <img src="{{ items.imageUrl }}" height="75" />
+            </td>
+            <!-- <td>{{ items.sku }}</td> -->
+            <td >{{ items.name }}</td>
+            <!-- <td>{{ items.description }}</td> -->
+            <td>{{ items.unitPrice | currency:'USD'}}</td>
+            <!-- <td>{{ items.imageUrl }}</td> -->
+            <!-- <td>{{ items.active }}</td> -->
+            <td>{{ items.unitsInStock }}</td>
+            <!-- <td>{{ items.dateCreated }}</td> -->
+            <!-- <td>{{ items.lastUpdated }}</td> -->
+        </tr>
+    </tbody>
+    
+</table>

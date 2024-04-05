@@ -1,0 +1,10 @@
+<div class="form-header">
+    <form  onsubmit="return false;" method="GET">
+        <input  #searchParam (keyup.enter)="navigateToProductListComponent(searchParam.value)" class="au-input au-input-xl" 
+        type="text" name="search" placeholder="Search for data ..." />
+        <button (click)="navigateToProductListComponent(searchParam.value)" class="au-btn-submit">
+          Search
+        </button>
+      </form>
+</div>
+
